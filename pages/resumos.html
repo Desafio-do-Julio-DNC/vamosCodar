@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,87 @@
 
   <!-- SCRIPTS -->
   <script src="../scripts/components/header.js" defer></script>
+  <script src="../scripts/Views/resumoHTML.js" defer></script>
 </head>
+
 <body>
 
   <header-component></header-component>
-  <h1>Resumos</h1>
-  
+
+  <form id="form">
+    <label for="Escolha o seu resumo">
+      <select name="resumo" id="resumo">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">Javascript</option>
+      </select>
+    </label>
+  </form>
+  <div id="showContent">
+    <h1 id="test">default</h1>
+  </div>
+
+
+  <script>
+    let formTest = document.getElementById('test');
+    let formInput = document.getElementById('resumo').value;
+
+    window.addEventListener('load',
+      function () {
+        formTest.innerText = formInput
+      }
+    )
+
+    document.getElementById('resumo').addEventListener('change', e => {
+      console.log(e.target.value)
+
+      if (e.target.value == 'html') {
+        formTest.innerHTML = '<header-component></header-component>'
+      } else {
+        formTest.innerText = formInput
+
+      }
+
+
+    })
+
+
+    console.log(typeof formInput)
+
+    // function setTest() {
+
+    //   if(formInput === 'html'){
+    //     formTest.innerText = formInput
+    //   } else{
+    //     formTest.innerText = '2'
+    //   }
+
+    //   // switch (formInput) {
+    //   //   case 'html':
+    //   //     console.log(formTest.innerText)
+    //   //     formTest.innerHTML = "<header-component></header-component>";
+    //   //     break;
+    //   //   case 'css':
+    //   //     console.log(formTest.innerText)
+    //   //     formTest.innerHTML = "css";
+    //   //     break;
+    //   //   case 'javascript':
+    //   //     console.log(formTest.innerText)
+    //   //     formTest.innerHTML = "<header-component></header-component><header-component></header-component>";
+    //   //     break;
+
+    //   //   default:
+    //   //     break;
+    //   //}
+
+    //   console.log('mudou')
+
+
+    // }
+    // setTest()
+
+  </script>
+
 </body>
+
 </html>

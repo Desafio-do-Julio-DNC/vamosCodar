@@ -13,7 +13,7 @@ class Header extends HTMLElement {
     componentRoot.setAttribute("class", "container");
 
     const insideHeader = document.createElement("header");
-    insideHeader.setAttribute("class", "header");
+    insideHeader.setAttribute("class", "header max-w");
     componentRoot.appendChild(insideHeader);
 
     const headerLogo = document.createElement("a");
@@ -65,9 +65,11 @@ class Header extends HTMLElement {
     }
     .container{
       border-bottom: 1px solid #d9d9d9;
-    }    
-    .header{
+    }       
+    .max-w{
       max-width: 76.3888889%;
+    } 
+    .header{      
       margin: 35px auto 13.5px auto;
       
       display: flex;
