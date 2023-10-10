@@ -93,6 +93,36 @@ class Header extends HTMLElement {
       font-weight: bold;      
       margin: 0
     }
+
+    @media screen and (max-width: 768px){
+      .max-w{
+        max-width: 83%;
+      } 
+      .header{  
+        flex-direction:column;
+        row-gap: 2rem;
+      }
+      nav a {
+      font-size: 1.6rem
+      }
+    }
+
+    @media screen and (max-width: 468px){
+      .max-w{
+        max-width: 91%;
+      } 
+      .header{  
+        flex-direction:column;
+        row-gap: 2rem;
+      }
+      .header nav{
+        gap: 8px;
+      }
+      
+      nav a {
+      font-size: 1.2rem
+      }
+    }
     `;
 
     return style;
