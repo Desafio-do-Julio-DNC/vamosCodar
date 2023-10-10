@@ -1,3 +1,4 @@
+'
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +13,181 @@
   <!-- SCRIPTS -->
   <script src="../scripts/components/header.js" defer></script>
 
+  <style>
+    .page-container {
+      font-size: 12pt;
+      padding: 20px;
+    }
 
+    .image {
+      display: flex;
+      align-items: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .questoes {
+      margin-top: 40px
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 15pt;
+    }
+
+    .respostas {
+      font-weight: 600;
+      font-size: 12pt;
+    }
+
+    button {
+      margin-top: 50px;
+
+      width: 100px;
+      height: 40px;
+      font-size: 12pt;
+      cursor: pointer;
+    }
+
+    #resposta {
+      text-align: center;
+    }
+  </style>
 
 </head>
 
 <body>
   <header-component></header-component>
-  <h1>Pratique</h1>
+  <div class="page-container">
+    <div class="image">
+      <img src="../images/HTML.png" width="600px" alt="">
+    </div>
+    <section>
+      <!-- Questão 1 -->
+      <div>
+        <h2>1- Qual elemento HTML é usado para criar um link</h2>
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>a.</b> &lt;link&gt; <br>
+        </p>
 
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>b.</b> &lt;a&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>c.</b> &lt;href&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>d.</b> &lt;url&gt; <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta1"></label>
+        </p>
+      </div>
+
+      <!-- Questão 2 -->
+      <div>
+        <h2 class="questoes">2- Qual tag HTML é usada para criar um cabeçalho de nível 1?</h2>
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>a.</b> &lt;header&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>b.</b> &lt;heading&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>c.</b> &lt;h&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>d.</b> &lt;h1&gt; <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta2"></label>
+        </p>
+      </div>
+
+      <!-- Questão 3 -->
+      <div>
+        <h2 class="questoes">3- Qual elemento HTML é usado para criar um formulário?</h2>
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>a.</b> &lt;input&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>b.</b> &lt;form&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>c.</b> &lt;submit&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>d.</b> &lt;button&gt; <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta3"></label>
+        </p>
+      </div>
+
+      <!-- Questão 4 -->
+      <div>
+        <h2 class="questoes">4- Qual elemento HTML é usado para criar uma quebra de linha?</h2>
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>a.</b> &lt;nl&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>b.</b> &lt;lb&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>c.</b> &lt;br&gt; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>d.</b> &lt;newline&gt; <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta4"></label>
+        </p>
+      </div>
+
+      <!-- Questão 5 -->
+      <div>
+        <h2 class="questoes">5- Qual elemento HTML é usado para criar uma tabela?</h2>
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>a.</b> &lt;table&gt; <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>b.</b> &lt;grid&gt; <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>c.</b> &lt;tabular&gt; <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>d.</b> &lt;tb&gt; <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta5"></label>
+        </p>
+      </div>
+
+      <div id="resposta">
+        <button id="resposta" onclick="responder()"><b>Responder</b></button>
+      </div>
+    </section>
+  </div>
+
+
+  <script src="../scripts/pratique.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,193 @@
+'
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratique</title>
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../styles/global.css">
+
+
+  <!-- SCRIPTS -->
+  <script src="../scripts/components/header.js" defer></script>
+
+  <style>
+    .page-container {
+      font-size: 12pt;
+      padding: 20px;
+    }
+
+    .image {
+      display: flex;
+      align-items: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .questoes {
+      margin-top: 40px
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 15pt;
+    }
+
+    .respostas {
+      font-weight: 600;
+      font-size: 12pt;
+    }
+
+    button {
+      margin-top: 50px;
+
+      width: 100px;
+      height: 40px;
+      font-size: 12pt;
+      cursor: pointer;
+    }
+
+    #resposta {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header-component></header-component>
+  <div class="page-container">
+    <div class="image">
+      <img src="../images/CSS.png" width="600px" alt="">
+    </div>
+    <section>
+      <!-- Questão 1 -->
+      <div>
+        <h2>1- Qual é a função principal do CSS em desenvolvimento web?</h2>
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>a.</b> Fornecer funcionalidade interativa <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>b.</b> Estruturar o conteúdo da página <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>c.</b> Definir a aparência e o estilo da página <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>d.</b> Gerar conteúdo dinamicamente <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta1"></label>
+        </p>
+      </div>
+
+      <!-- Questão 2 -->
+      <div>
+        <h2 class="questoes">2- Qual propriedade CSS é usada para definir a cor do texto?</h2>
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>a.</b> font-color <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>b.</b> text-color <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>c.</b> font-style <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>d.</b> color <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta2"></label>
+        </p>
+      </div>
+
+      <!-- Questão 3 -->
+      <div>
+        <h2 class="questoes">3- Como você define uma margem de 20 pixels para todos os lados de um elemento usando CSS?</h2>
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>a.</b> margin: 20px; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>b.</b> margin: 20px 20px 20px 20px; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>c.</b> margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>d.</b> Todos os anteriores <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta3"></label>
+        </p>
+      </div>
+
+      <!-- Questão 4 -->
+      <div>
+        <h2 class="questoes">4- Qual propriedade CSS é usada para criar uma sombra ao redor de um elemento?</h2>
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>a.</b> box-shadow <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>b.</b> shadow <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>c.</b> text-shadow <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>d.</b> border-shadow  <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta4"></label>
+        </p>
+      </div>
+
+      <!-- Questão 5 -->
+      <div>
+        <h2 class="questoes">5- Qual propriedade CSS é usada para definir a imagem de fundo de um elemento?</h2>
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>a.</b> image-background <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>b.</b> background-image <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>c.</b> element-background <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>d.</b> bg-image <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta5"></label>
+        </p>
+      </div>
+
+      <div id="resposta">
+        <button id="resposta" onclick="responder()"><b>Responder</b></button>
+      </div>
+    </section>
+  </div>
+
+
+  <script src="../scripts/pratique-css.js"></script>
+</body>
+
+</html>

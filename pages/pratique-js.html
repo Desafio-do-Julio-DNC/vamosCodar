@@ -1,0 +1,193 @@
+'
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratique</title>
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../styles/global.css">
+
+
+  <!-- SCRIPTS -->
+  <script src="../scripts/components/header.js" defer></script>
+
+  <style>
+    .page-container {
+      font-size: 12pt;
+      padding: 20px;
+    }
+
+    .image {
+      display: flex;
+      align-items: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .questoes {
+      margin-top: 40px
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 15pt;
+    }
+
+    .respostas {
+      font-weight: 600;
+      font-size: 12pt;
+    }
+
+    button {
+      margin-top: 50px;
+
+      width: 100px;
+      height: 40px;
+      font-size: 12pt;
+      cursor: pointer;
+    }
+
+    #resposta {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header-component></header-component>
+  <div class="page-container">
+    <div class="image">
+      <img src="../images/JS.png" width="600px" alt="">
+    </div>
+    <section>
+      <!-- Questão 1 -->
+      <div>
+        <h2>1- Qual palavra-chave é usada para declarar uma variável em JavaScript?</h2>
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>a.</b> let <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>b.</b> var <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>c.</b> int <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao1" class="alternativas"> <b>d.</b> variable <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta1"></label>
+        </p>
+      </div>
+
+      <!-- Questão 2 -->
+      <div>
+        <h2 class="questoes">2- Qual operador é usado para atribuição de valor em JavaScript?</h2>
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>a.</b> == <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>b.</b> = <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>c.</b> := <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao2" class="alternativas"> <b>d.</b> === <br>
+        </p>
+
+        <p>
+          <label class="respostas" id="resposta2"></label>
+        </p>
+      </div>
+
+      <!-- Questão 3 -->
+      <div>
+        <h2 class="questoes">3- Qual função JavaScript é usada para converter uma string em um número inteiro?</h2>
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>a.</b> parseFloat() <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>b.</b> toInt() <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>c.</b> parseNumber() <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao3" class="alternativas"> <b>d.</b> parseInt() <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta3"></label>
+        </p>
+      </div>
+
+      <!-- Questão 4 -->
+      <div>
+        <h2 class="questoes">4- Qual operador é usado para testar igualdade de valor e tipo em JavaScript?</h2>
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>a.</b> === <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>b.</b> == <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>c.</b> = <br>
+        </p>
+
+        <p>
+          <input type="radio" name="questao4" class="alternativas"> <b>d.</b> >= <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta4"></label>
+        </p>
+      </div>
+
+      <!-- Questão 5 -->
+      <div>
+        <h2 class="questoes">5- Qual função é usada para remover o último elemento de um array em JavaScript?</h2>
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>a.</b> push() <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>b.</b> pop() <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>c.</b> shift() <br>
+        </p>
+      
+        <p>
+          <input type="radio" name="questao5" class="alternativas"> <b>d.</b> unshift() <br>
+        </p>
+        <p>
+          <label class="respostas" id="resposta5"></label>
+        </p>
+      </div>
+
+      <div id="resposta">
+        <button id="resposta" onclick="responder()"><b>Responder</b></button>
+      </div>
+    </section>
+  </div>
+
+
+  <script src="../scripts/pratique-js.js"></script>
+</body>
+
+</html>
