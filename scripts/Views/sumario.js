@@ -14,6 +14,7 @@ class sumario extends HTMLElement {
   renderSumario(listOfTitle) {
     const componentRoot = document.createElement("section");
 
+    
     const title = document.createElement("h2");
     componentRoot.setAttribute("id", "renderSumario");
     componentRoot.setAttribute("class", "sumario");
@@ -23,6 +24,7 @@ class sumario extends HTMLElement {
     const list = document.createElement("ul");
     componentRoot.appendChild(list);
 
+    //faz o map na lista de títulos encontradas na página e renderiza na tela
     listOfTitle.map((titulo, index) => {
       console.log(titulo);
       console.log(index);
@@ -30,6 +32,8 @@ class sumario extends HTMLElement {
       listItem.setAttribute("key", index);
       list.appendChild(listItem);
 
+
+      //Cria a anchora que irá puxar a função GoTo
       let listAnchor = document.createElement("a");
       listItem.appendChild(listAnchor);
       listAnchor.textContent = titulo;
