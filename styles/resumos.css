@@ -1,0 +1,47 @@
+
+
+#showContent{
+  display: flex;
+  justify-content: center;
+}
+.defaultimg{
+  width: 375px;
+
+}
+
+#form{
+  display: flex;
+  margin: 50px auto;
+  width: 100%;
+  
+  justify-content: center;
+  position: relative;
+}
+
+#form label {  
+  border: 1px gray solid;
+  padding: 1rem 2rem;
+  border-radius: 30rem;
+  width: 250px;
+  height: 36px;
+  transition: ease-out;
+  transition-duration: .3s;
+}
+#form select{
+  border: none;
+  background-color: transparent;
+  font-size: 2.2rem; 
+  position: absolute;
+  top: calc(50% - 13px);
+}
+
+#form select:hover ~ label {
+  background-color: #d9d9d9;
+  transition: ease-in;
+  transition-duration: .3s ;
+}
+
+#form option {
+  background-color: transparent;
+  font-size: 1rem;
+}
