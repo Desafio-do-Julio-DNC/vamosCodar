@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumos</title>
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/resumos.css">
+
+
+  <!-- SCRIPTS -->
+  <script src="../scripts/components/header.js" defer></script>
+  <script src="../scripts/Views/sumario.js" defer></script>
+  <script src="../scripts/Views/resumoHTML.js" defer></script>
+  <script src="../scripts/Views/resumoCSS.js" defer></script>
+  <script src="../scripts/Views/resumoJS.js" defer></script>
+</head>
+
+<body>
+
+  <header-component></header-component>
+
+  <form id="form">
+
+    <select name="resumo" id="resumo">
+      <option value="" selected disabled>Selecione uma opção</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="javascript">Javascript</option>
+    </select>
+    <label for="Escolha o seu resumo">
+
+    </label>
+  </form>
+  <div id="showSumario"></div>
+  <div id="showContent"></div>
+
+
+  <script>
+    let showContent = document.getElementById('showContent');
+    let showSumario = document.getElementById('showSumario');
+    let formInput = document.getElementById('resumo').value;
+
+    let defaultImgs = ['https://i.blogs.es/510b92/subrredits-aburrimiento-cuarentena/500_333.jpg',
+      'https://live.staticflickr.com/3103/3137857614_636e8123f8_b.jpg',
+      'https://pbs.twimg.com/media/FSmDyTDX0BANJ5A.png',
+      'https://miro.medium.com/max/620/1*249RCThomKrXFI5TXvqNtg.jpeg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfelBOcDrdUwOSfkjbmY9x_y2sZyobV_NFkIznuV4_UK6fghQl6HpewbgfLU98E7HLs5M&usqp=CAU',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU6ToIIZg1XHCCqBuqJn8gw1Bm4w6-aShgX7g3YQQwldjHkgRqVyGND4CYJfMpbUPn5as&usqp=CAU',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4QDgflm724LpvXeZoNSAin6WwXdlAIKTEysOaRyjXiYkJEvd6boPRu-c2FjFe1ljTIpw&usqp=CAU',
+      'https://image.spreadshirtmedia.net/image-server/v1/compositions/T1089A2PA4283PT17X52Y0D176491441W8238H9886/views/1,width=550,height=550,appearanceId=2,backgroundColor=000000,noPt=true/gato-programador-beanie.jpg',
+      'https://pbs.twimg.com/media/FSmDyTDX0BANJ5A.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj5l4_qjLeKfxMmlQIPgfp4-rh0OH4VMIEV5xvypcR6foDAga--_9YVcItwao_MRA8q84&usqp=CAU'
+    ];
+
+
+    //Este item tem como objetivo apenas carregar uma imagem aleatória na tela para quando a pessoa acaba de abrir a página. 
+
+    //TOTALMENTE ALEATÓRIO
+
+    window.addEventListener('load',
+      function () {
+        showContent.innerHTML = `<img src="${defaultImgs[Math.floor(Math.random() * defaultImgs.length)]}" alt="default-img" class='defaultimg'> `
+      }
+    )
+
+    //este evento tem como objetivo mostrar na tela o conteúdo conforme o assunto selecionado
+
+    document.getElementById('resumo').addEventListener('change', e => {
+      console.log(e.target.value)
+
+      switch (e.target.value) {
+        case 'html':
+          showContent.innerHTML = '<html-resumo></html-resumo>'
+          break;
+        case 'css':
+          showContent.innerHTML = '<css-resumo></css-resumo>'
+          break;
+        case 'javascript':
+          showContent.innerHTML = '<js-resumo></js-resumo>'
+          break;
+
+        default:
+          break;
+      }
+
+    })
+
+
+    //Este event listener tem como função escutar as mudanças do input para inserir o sumário. Veja que é muito parecido com o anterior, mas precisava ser feito depois do anterior para ser capaz de usar os elementos após a sua montagem na tela.
+
+    document.getElementById('resumo').addEventListener('change', e => {
+
+      let listOfTitles = [];
+
+      let sumaryContent = Array.from(document.getElementById('showContent').children[0].shadowRoot.querySelectorAll('.chapterTitle'));
+
+      let getTitle = sumaryContent.map(elemento => {
+        listOfTitles.push(elemento.innerText)
+      })
+
+
+
+      switch (e.target.value) {
+        case 'html':
+          showSumario.innerHTML = `<sumario-component listOfTitles="${listOfTitles}"></sumario-component>`
+          break;
+        case 'css':
+          showSumario.innerHTML = `<sumario-component listOfTitles="${listOfTitles}"></sumario-component>`
+          break;
+        case 'javascript':
+          showSumario.innerHTML = `<sumario-component listOfTitles="${listOfTitles}"></sumario-component>`
+          break;
+
+        default:
+          break;
+      }
+
+
+
+    })
+
+    //Esta função tem como objetivo consultar a shadowRoot de conteúdo, verificar a localização de determinado elemento e ir até este elemento com o Scroll Into View
+
+    function goTo(chapterTitle) {
+      document.getElementById('showContent').children[0].shadowRoot.getElementById(`${chapterTitle}`).scrollIntoView({behavior:"smooth"})
+
+    }
+
+    
+
+  </script>
+
+</body>
+
+</html>
