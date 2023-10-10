@@ -17,6 +17,7 @@ class resumoHTML extends HTMLElement {
     
     const title = document.createElement('h2');    
     componentRoot.setAttribute('id', 'chapter1')
+    title.setAttribute('class', 'chapterTitle');
     componentRoot.appendChild(title);
     title.textContent = "Introdução ao HTML: A Linguagem da Web";    
     const paragraph1 = document.createElement('p');
