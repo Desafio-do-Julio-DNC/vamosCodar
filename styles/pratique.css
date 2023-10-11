@@ -1,0 +1,55 @@
+.page-container {
+  font-size: 12pt;
+  padding: 20px;
+}
+
+.image {
+  display: flex;
+  align-items: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.questoes {
+  margin-top: 40px
+}
+
+p {
+  margin-top: 15px;
+  font-size: 15pt;
+}
+
+.respostas {
+  font-weight: 600;
+  font-size: 12pt;
+}
+
+button {
+  margin-top: 50px;
+
+  width: 100px;
+  height: 40px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+#resposta {
+  text-align: center;
+}
+
+.container{
+  max-width: 76.3888889%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 83%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .container {
+    max-width: 91%;
+  }
+}

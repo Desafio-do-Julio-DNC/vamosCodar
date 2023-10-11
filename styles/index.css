@@ -1,0 +1,150 @@
+
+#superior {
+  text-align: center;
+}
+
+#titulo-superior {
+  font-size: 30pt;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  margin-bottom: 50px;
+
+  margin-top: 25px;
+}
+
+.titulo-cards {
+  font-size: 15pt;
+  margin-top: 25px;
+}
+
+.cards-secoes {
+  height: 300px;
+  border: solid 1px gray;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale();
+  
+}
+
+.card-html {
+  background-image: url(https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2021/11/o-que-e-html.jpg);
+}
+
+.card-css {
+  background-image: url(https://arquivo.devmedia.com.br/marketing/img/guia-css-38149.png);
+}
+
+.card-js {
+  background-image: url(https://www.valuehost.com.br/blog/wp-content/uploads/2020/01/original-e8278705fab1f1036f26c2419edf8f0f.jpeg);
+  background-position: left;
+}
+
+
+
+.cards-secoes:hover {
+  transform: translateY(0.2);
+  transition-duration: 0.5s;
+  box-shadow: 10px 5px rgb(158, 158, 208);
+  filter: none;
+}
+
+.cards-secoes:checked {
+  filter: none;
+}
+
+#formulario {
+  max-width: 375px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#formulario h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 20px;
+  width: 80%;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 5px;
+
+  font-size: 15pt;
+}
+
+#cadastrar {
+  width: 50%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cadastrar:hover {
+  transform: translateY(0.2);
+  transition-duration: 2s;
+  box-shadow: 5px 5px rgb(158, 158, 208);
+}
+
+.container{
+  max-width: 76.3888889%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  
+
+  .cards {
+    display: flex;
+    margin-bottom: 50px;
+  
+    margin-top: 25px;
+    position: relative;
+
+    height: 300px;
+    width: 100%;
+
+    overflow-x: scroll;
+  }
+  
+  .cards-secoes {
+
+    height: 300px;
+    min-width: 450px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    cursor: pointer;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    filter: grayscale(.5);
+    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-secoes {
+
+    min-width: 375px;
+    width: 100%;
+  }
+}
