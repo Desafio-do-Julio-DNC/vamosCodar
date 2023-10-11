@@ -10,8 +10,13 @@
   justify-content: center;
 }
 
+.image img{
+  width: 100%;
+  max-width: 600px;
+}
+
 .questoes {
-  margin-top: 40px
+  margin-top: 40px  
 }
 
 p {
@@ -44,12 +49,18 @@ button {
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 83%;
+    max-width: 91%;
   }
 }
 
 @media screen and (max-width: 468px) {
   .container {
-    max-width: 91%;
+    max-width: 100%;
+  }
+  h2{
+    font-size: 20px;
+  }
+  p{
+    font-size: 16px;
   }
 }
