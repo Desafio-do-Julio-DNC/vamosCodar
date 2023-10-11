@@ -4,112 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    section {
-      padding: 20px;
-    }
 
-    #superior {
-      text-align: center;
-    }
-
-    #titulo-superior {
-      font-size: 30pt
-    }
-
-    .cards {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin-bottom: 50px;
-
-      margin-top: 25px;
-    }
-
-    .titulo-cards {
-      font-size: 15pt;
-      margin-top: 25px;
-    }
-
-    .card-html {
-      width: 15%;
-      height: 300px;
-      border: solid 1px gray;
-      border-radius: 20px;
-      cursor: pointer;
-
-    }
-
-    .card-css {
-      width: 15%;
-      height: 300px;
-      border: solid 1px gray;
-      border-radius: 20px;
-      cursor: pointer;
-
-    }
-
-    .card-js {
-      width: 15%;
-      height: 300px;
-      border: solid 1px gray;
-      border-radius: 20px;
-      cursor: pointer;
-
-    }
-
-    .cards-secoes:hover {
-      transform: translateY(0.2);
-      transition-duration: 2s;
-      box-shadow: 20px 10px rgb(158, 158, 208);
-    }
-
-    #formulario {
-      width: 50%;
-      margin: auto;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    #formulario h1 {
-      font-size: 25pt;
-      margin-bottom: 20px;
-    }
-
-    input {
-      margin: 20px;
-      width: 40%;
-      height: 35px;
-      border: 1px solid gray;
-      border-radius: 5px;
-      padding-left: 5px;
-    }
-
-    #cadastrar {
-      font-size: 15pt;
-      width: 15%;
-      height: 35px;
-
-      cursor: pointer ;
-      border-radius: 5px;
-      border: 1px solid gray
-    }
-
-    #cadastrar:hover {
-      transform: translateY(0.2);
-      transition-duration: 2s;
-      box-shadow: 5px 5px rgb(158, 158, 208);
-    }
-
-  </style>
   <title>Vamos Codar</title>
 
   <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/index.css">
   <script src="./scripts/components/header.js" defer></script>
 </head>
 
 <body>
-  <header-component></header-component>
+  <header-component home="true"></header-component>
   <section>
     <div id="superior">
       <h1 id="titulo-superior">Vamos codar!</h1>
@@ -117,49 +21,55 @@
     </div>
 
     <!-- Cards - Resumo   -->
-    <h1 class="titulo-cards">Resumos</h1>
-    <div class="cards">
-      <div class="card-html cards-secoes">
-        HTML imagem
+    <section class="container" id="resumo">
+      <h1 class="titulo-cards">Resumos</h1>
+      <div class="cards">
+        <a href="/pages/resumos.html" class="card-html cards-secoes" >
+
+        </a>
+        <a href="/pages/resumos.html"  class="card-css cards-secoes">
+
+        </a>
+        <a href="/pages/resumos.html"  class="card-js cards-secoes">
+
+        </a>
       </div>
-      <div class="card-css cards-secoes">
-        CSS imagem
-      </div>
-      <div class="card-js cards-secoes">
-        JAVAESCRIPT imagem
-      </div>
-    </div>
+    </section>
 
     <!-- Cards - Pratique   -->
-    <h1 class="titulo-cards">Pratique</h1>
-    <div class="cards">
-      <div class="card-html cards-secoes">
-        HTML imagem
+    <section class="container" id="pratique">
+      <h1 class="titulo-cards">Pratique</h1>
+      <div class="cards">
+        <a href="/pages/pratique.html"  class="card-html cards-secoes">
+          
+        </a>
+        <a href="/pages/pratique-css.html" class="card-css cards-secoes">
+          
+        </a>
+        <a href="/pages/pratique-js.html" class="card-js cards-secoes">
+          
+        </a>
       </div>
-      <div class="card-css cards-secoes">
-        CSS imagem
-      </div>
-      <div class="card-js cards-secoes">
-        JAVAESCRIPT imagem
-      </div>
-    </div>
+    </section>
 
     <!-- Cards - Cursos   -->
-    <h1 class="titulo-cards">Cursos</h1>
-    <div class="cards">
-      <div class="card-html cards-secoes">
-        HTML imagem
+    <section class="container" id="cursos">
+      <h1 class="titulo-cards">Cursos</h1>
+      <div class="cards">
+        <div class="card-html cards-secoes">
+          
+        </div>
+        <div class="card-css cards-secoes">
+          
+        </div>
+        <div class="card-js cards-secoes">
+          
+        </div>
       </div>
-      <div class="card-css cards-secoes">
-        CSS imagem
-      </div>
-      <div class="card-js cards-secoes">
-        JAVAESCRIPT imagem
-      </div>
-    </div>
+    </section>
   </section>
 
-    <!-- Formulário -->
+  <!-- Formulário -->
   <div id="formulario">
     <h1>Deseja receber atualizações?</h1>
     <form action="https://api.sheetmonkey.io/form/99GadqZuG6hUwzC1871CKj" method="post">
@@ -172,6 +82,13 @@
 
 
   <script src="scripts/plataforma.js"></script>
+  <script>
+    document.addEventListener('touch', element =>{
+      console.log(element)
+    }  )
+
+    
+  </script>
 </body>
 
 </html>
