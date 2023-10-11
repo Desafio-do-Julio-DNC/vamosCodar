@@ -1,0 +1,161 @@
+
+#superior {
+  background-color: #00ADE2;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  margin-bottom: 50px;
+
+  margin-top: 25px;
+}
+
+.titulo-cards {
+  font-size: 15pt;
+  margin-top: 25px;
+}
+
+.cards-secoes {
+  height: 300px;
+  border: solid 1px gray;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale();
+  
+}
+
+.card-jornada {
+  background-image: url(https://jornadadodev.com.br/images/og-image.jpg);
+}
+
+.card-cfb {
+  background-image: url(https://i.ytimg.com/vi/GPK8A-A156o/hqdefault.jpg);
+  background-position: left;
+}
+
+.card-guanabara-html {
+  background-image: url(https://i.ytimg.com/vi/Ejkb_YpuHWs/mqdefault.jpg);
+  background-position: right;
+}
+
+.card-dnc {
+  background-image: url(https://www.escoladnc.com.br/wp-content/uploads/2022/05/thumb_prov_site.png);
+}
+
+.card-dio-html {
+  background-image: url(https://hermes.dio.me/tracks/cover/3d9aba0d-728c-4c32-83fe-c20490a72cad.png);
+}
+
+.card-rocketseat {
+  background-image: url(https://miro.medium.com/v2/resize:fit:1200/1*fs0ScMc45X9QEwno8G414A.png);
+  background-position: right;
+}
+
+
+
+.cards-secoes:hover {
+  transform: translateY(0.2);
+  transition-duration: 0.5s;
+  box-shadow: 10px 5px rgb(158, 158, 208);
+  filter: none;
+}
+
+.cards-secoes:checked {
+  filter: none;
+}
+
+#formulario {
+  max-width: 375px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#formulario h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 20px;
+  width: 80%;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 5px;
+
+  font-size: 15pt;
+}
+
+#cadastrar {
+  width: 50%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cadastrar:hover {
+  transform: translateY(0.2);
+  transition-duration: 2s;
+  box-shadow: 5px 5px rgb(158, 158, 208);
+}
+
+.container{
+  max-width: 76.3888889%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  
+
+  .cards {
+    display: flex;
+    margin-bottom: 50px;
+  
+    margin-top: 25px;
+    position: relative;
+
+    height: 300px;
+    width: 100%;
+
+    overflow-x: scroll;
+  }
+  
+  .cards-secoes {
+
+    height: 300px;
+    min-width: 450px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    cursor: pointer;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    filter: grayscale(.5);
+    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-secoes {
+
+    min-width: 375px;
+    width: 100%;
+  }
+}

@@ -87,7 +87,7 @@ class Header extends HTMLElement {
       },
       {
         text: "Pratique",
-        link: "/pages/pratique.html",
+        link: "/#pratique",
       },
       {
         text: "Resumos",
@@ -95,7 +95,7 @@ class Header extends HTMLElement {
       },
       {
         text: "Cursos",
-        link: "/pages/cursos.html",
+        link: "/#cursos",
       },
     ];
 
