@@ -4,18 +4,19 @@ class Header extends HTMLElement {
 
     const shadow = this.attachShadow({ mode: "open" });
 
-    const home = this.getAttribute('home')
+    const home = this.getAttribute("home");
+    const activePage = this.getAttribute("activePage");
 
-    if(home){
-
-    shadow.appendChild(this.headerHome());} else {
-      shadow.appendChild(this.generalHeader());
+    if (home) {
+      shadow.appendChild(this.headerHome(activePage));
+    } else {
+      shadow.appendChild(this.generalHeader(activePage));
     }
 
     shadow.appendChild(this.style());
   }
 
-  headerHome() {
+  headerHome(activePage) {
     const componentRoot = document.createElement("div");
     componentRoot.setAttribute("class", "container");
 
@@ -34,36 +35,34 @@ class Header extends HTMLElement {
 
     let navigationList = [
       {
-        text: "Quem Somos",
+        text: "quem somos",
         link: "/pages/quem-somos.html",
       },
       {
-        text: "Pratique",
+        text: "pratique",
         link: "/#pratique",
       },
       {
-        text: "Resumos",
+        text: "resumos",
         link: "/#resumo",
       },
       {
-        text: "Cursos",
+        text: "cursos",
         link: "/#cursos",
       },
     ];
 
-
-    navigationList.map(navContent => {
-      let navItem = document.createElement('a');
+    navigationList.map((navContent) => {
+      let navItem = document.createElement("a");
       navGrid.appendChild(navItem);
       navItem.textContent = navContent.text;
-      navItem.setAttribute('href', navContent.link)
-    })
-
+      navItem.setAttribute("href", navContent.link);      
+    });
 
     return componentRoot;
   }
 
-  generalHeader() {
+  generalHeader(activePage) {
     const componentRoot = document.createElement("div");
     componentRoot.setAttribute("class", "container");
 
@@ -82,31 +81,35 @@ class Header extends HTMLElement {
 
     let navigationList = [
       {
-        text: "Home",
+        text: "home",
         link: "/",
       },
       {
-        text: "Pratique",
+        text: "pratique",
         link: "/#pratique",
       },
       {
-        text: "Resumos",
+        text: "resumos",
         link: "/pages/resumos.html",
       },
       {
-        text: "Cursos",
+        text: "cursos",
         link: "/#cursos",
       },
     ];
 
-
-    navigationList.map(navContent => {
-      let navItem = document.createElement('a');
+    navigationList.map((navContent) => {
+      let navItem = document.createElement("a");
       navGrid.appendChild(navItem);
       navItem.textContent = navContent.text;
-      navItem.setAttribute('href', navContent.link)
-    })
+      navItem.setAttribute("href", navContent.link);
+      
 
+      if (activePage == navContent.text) {
+        console.log(activePage)
+        navItem.setAttribute("class", "activePage");
+      }
+    });
 
     return componentRoot;
   }
@@ -135,7 +138,12 @@ class Header extends HTMLElement {
     a{
       color: inherit;
       text-decoration:none;
-      font-size: 20px
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+
+    .header nav a {
+      text-align: center
     }
 
     .header nav{
@@ -147,6 +155,11 @@ class Header extends HTMLElement {
     .header-logo {
       font-weight: bold;      
       margin: 0
+    }
+
+    .activePage{
+      text-decoration: underline 5px purple
+      
     }
 
     @media screen and (max-width: 768px){
