@@ -138,7 +138,12 @@ class Header extends HTMLElement {
     a{
       color: inherit;
       text-decoration:none;
-      font-size: 20px
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+
+    .header nav a {
+      text-align: center
     }
 
     .header nav{
