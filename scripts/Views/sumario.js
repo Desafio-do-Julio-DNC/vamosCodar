@@ -26,17 +26,14 @@ class sumario extends HTMLElement {
 
     //faz o map na lista de títulos encontradas na página e renderiza na tela
     listOfTitle.map((titulo, index) => {
-      console.log(titulo);
-      console.log(index);
       let listItem = document.createElement("li");
       listItem.setAttribute("key", index);
       list.appendChild(listItem);
 
-
       //Cria a anchora que irá puxar a função GoTo
       let listAnchor = document.createElement("a");
       listItem.appendChild(listAnchor);
-      listAnchor.textContent = titulo;
+      listAnchor.textContent = `Ir para: ${titulo}`;
       listAnchor.setAttribute("onclick", `goTo("chapter${index + 1}")`);
     });
 
